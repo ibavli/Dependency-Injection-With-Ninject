@@ -28,7 +28,8 @@ namespace DependencyInjectionWithNinject.WebUI.Controllers
                 };
                 _adminDal.CreateAdmin(sampleAdmin);
             }
-            return View(admin);
+            Admin _admin = _adminDal.GetAdmin("admin");
+            return View(_admin);
         }
     }
 }
